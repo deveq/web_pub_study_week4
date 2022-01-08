@@ -1,0 +1,366 @@
+body, html {
+    font-size : 62.5%;
+    background-color: #121725e0;
+    height : 100vh;
+}
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin : 0;
+    padding : 0;
+}
+
+/* Container */
+section.container {
+    color : #fff;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    padding : 0 2.4rem 9.4rem;
+    width : 37.5rem;
+    margin : auto;
+    position : relative;
+}
+
+/* Header */
+header {
+    padding-top : 6.2rem;
+}
+
+header .logo h1 {
+    font-size : 0;
+}
+
+header .logo img {
+    width : 13.485rem;
+    height : 5.6rem;
+}
+
+/* Content */
+section.content {
+    padding-top : 5.7rem;
+    position : relative;
+    display : flex;
+    flex-direction : column;
+
+}
+
+section.container::before {
+    content : "";
+    display : block;
+    position : absolute;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    background-size : 100%;
+    background-image : url("./assets/mobile/image-host.jpg");
+    z-index : -1;
+    background-repeat : no-repeat;
+}
+
+
+/* Content - title */
+section.content .title {
+    font-size : 2.6rem;
+    font-weight : 400;
+    text-transform : uppercase;
+    text-align : center;
+}
+
+section.content .title span {
+    color : #54E6AF;
+}
+
+/* Content - description */
+section.content .description {
+    font-size : 1.5rem;
+    color : #C2CBE5;
+    line-height : 2.5rem;
+    text-align : center;
+    margin-top : 1.6rem;
+}
+
+/* Content - providers */
+section.content .providers {
+    /* width : 31.5rem; */
+    margin-top : 3.3rem;
+}
+
+section.content .providers ul {
+    list-style : none;
+    display : flex;
+    align-items : center;
+    justify-content: space-between;
+    
+}
+section.content .providers ul li {
+    height : 100%;
+}
+
+section.content .providers ul li a {
+    font-size : 0;
+    text-decoration: none;
+    color : #000;
+    vertical-align : bottom;
+    line-height : 1.7rem;
+}
+section.content .providers ul li:nth-child(1) img {
+    width : 5.6rem;
+
+}
+section.content .providers ul li:nth-child(2) img{
+    width : 4.5rem;
+
+}
+section.content .providers ul li:nth-child(3) img{
+    width : 7.3rem;
+}
+section.content .providers ul li:nth-child(4) img{
+    width : 7.7rem;
+}
+
+
+/* Content - email */
+section.content .email {
+    margin-top : 4.8rem;
+}
+section.content .email > *{
+    border : none;
+    width : 100%;
+    border-radius : 2.8rem;
+    height : 4.6rem;
+
+}
+
+section.content .email input {
+    border : none;
+    width : 100%;
+    border-radius : 2.8rem;
+    padding : 0.9rem 3.2rem;
+    background-color : #2C344B;
+    color : #fff;
+}
+
+section.content .email input::placeholder {
+    font-size : 1.4rem;
+    font-weight : bold;
+    line-height : 2.8rem;
+}
+
+.btn {
+    background-color: #54E6AF;
+    color : #121725;
+    font-size : 1.4rem;
+    font-weight : bold;
+    text-align : center;
+    line-height : 4.6rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #B3FFE2;
+}
+
+.btn--login {
+    margin-top : 1.6rem;
+}
+
+section.container .content .email .warning {
+    color : red;
+    position : absolute;
+    /* bottom : -3rem;
+    left : 3rem; */
+    bottom : -5.5rem;
+    left : 3rem;
+}
+
+@media screen and (min-width : 768px) {
+    section.container {
+        width : 76.8rem;
+        height : 102.4rem;
+        background-color: #121725;
+    }
+
+    section.container::before {
+        right : 0;
+        width : 49.1rem;
+        height : 76.7rem;
+        left :auto;
+        z-index : 0;
+        background-image : url("./assets/tablet/image-host.jpg");
+        
+    }
+
+    section.container::after {
+        /* content : ""; */
+        width : 23.2rem;
+        height : 10.4rem;
+        display : block;
+        position : absolute;
+        bottom : 0;
+        left : 3rem;
+        background-image : url("./assets/desktop/bg-pattern-dots.svg");
+    }
+    
+    section.container header {
+        z-index : 1;
+        align-self : flex-start;
+    }
+
+    section.container .content {
+        background-color: #121725;
+        width : 63.5rem;
+        margin-top : 15.2rem;
+    }
+
+
+    section.container .content .providers {
+        order : 1;
+    }
+    section.container .content .providers ul {
+        margin-right : 10rem;
+    }
+
+    section.container .content .title {
+        text-align : start;
+        font-size : 4.8rem;
+        margin-top : 9.3rem;
+    }
+
+    section.container .content .description {
+        text-align : start;
+        width : 44.5rem;
+        font-size : 1.8rem;
+    }
+
+    section.container .content .email {
+        position : relative;
+    }
+
+    section.container .content .email {
+        width : 42.7rem;
+        height : 5.6rem;
+        display : flex;
+        line-height: 5.6rem;
+        background-color: #2C344B;
+        border-radius : 2.8rem;
+        align-items : center;
+    }
+
+    section.container .content .email input {
+
+    }
+
+    section.container .content .email .btn {
+        margin-top : 0;
+        width : 16.2rem;
+        height : 4.6rem;
+        font-size : 1.4rem;
+        margin-right : 0.5rem;
+    }
+
+    
+section.container .content .email .warning {
+    bottom : -3rem;
+}
+
+
+}
+
+@media screen and (min-width : 1440px) {
+    section.container {
+        width : 127.5rem;
+        height : 64rem;
+        background-color: #121725;
+        align-items : flex-start;
+    }
+
+    section.container::before {
+        top : 13rem;
+        right : 0;
+        width : 88.8rem;
+        height : 64rem;
+        left :auto;
+        z-index : 0;
+        background-image : url("./assets/desktop/image-host.jpg");
+        
+    }
+
+    section.container::after {
+        content : "";
+        width : 23.2rem;
+        height : 10.4rem;
+        display : block;
+        position : absolute;
+        bottom : -20rem;
+        right : 0;
+        left : auto;
+        background-image : url("./assets/desktop/bg-pattern-dots.svg");
+    }
+    
+    section.container header {
+        z-index : 1;
+        align-self : flex-start;
+        margin-top : 13re;
+    }
+
+    section.container .content {
+        background-color: #121725;
+        width : 72.3rem;
+        height : 50.9rem;
+        margin-top : 15.2rem;
+    }
+
+
+    section.container .content .providers {
+        order : 1;
+    }
+    section.container .content .providers ul {
+        margin-right : 10rem;
+    }
+
+    section.container .content .title {
+        text-align : start;
+        font-size : 4.8rem;
+        margin-top : 8.8rem;
+        font-size : 5.2rem;
+    }
+
+    section.container .content .description {
+        text-align : start;
+        width : 44.5rem;
+        font-size : 1.8rem;
+    }
+
+    section.container .content .email {
+        position : relative;
+    }
+
+    section.container .content .email {
+        width : 42.7rem;
+        height : 5.6rem;
+        display : flex;
+        line-height: 5.6rem;
+        background-color: #2C344B;
+        border-radius : 2.8rem;
+        align-items : center;
+    }
+
+    section.container .content .email input {
+
+    }
+
+    section.container .content .email .btn {
+        margin-top : 0;
+        width : 16.2rem;
+        height : 4.6rem;
+        font-size : 1.4rem;
+        margin-right : 0.5rem;
+    }
+    section.container .content .email .warning {
+        bottom : -3rem;
+    }
+}

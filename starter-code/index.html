@@ -5,15 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Pod request access landing page</title>
+  <script defer src="./main.js"></script>
 </head>
 <body>
-  Publish your podcasts everywhere.
 
-  Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-  Apple Podcasts, Google Podcasts, Pocket Casts and more!
-
-  Request access
+  <section class="container">
+    
+    <header>
+      <div class="logo">
+        <h1>pod</h1>
+        <img src="./assets/desktop/logo.svg" alt="">
+      </div>
+  
+    </header>
+    <section class="content">
+  
+        <!-- 상단 타이틀 -->
+        <div class="title">
+          <span>Publish your podcasts </span>everywhere.
+        </div>
+  
+        <!-- description  -->
+        <div class="description">
+          Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!
+        </div>
+  
+        <!-- providers -->
+        <div class="providers">
+          <ul>
+            <li>
+              <a href="javascript:void(0)">
+                <img src="./assets/desktop/spotify.svg" alt="spotify"> 
+                Spotify
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <img src="./assets/desktop/apple-podcast.svg" alt="apple podcast">
+                Apple Podcast
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <img src="./assets/desktop/google-podcasts.svg" alt="google podcasts">
+                Google Podcasts
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <img src="./assets/desktop/pocket-casts.svg" alt="pocket casts">
+                Pocket Casts
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- 이메일 -->
+        <div class="email">
+          <input type="text" placeholder="Email address">
+          <div class="btn btn--login">
+            Request Access
+          </div>
+          <div class="warning" hidden>Oops! Please check your email</div>
+        </div>
+  
+    </section>
+  </section>
 </body>
 </html>
